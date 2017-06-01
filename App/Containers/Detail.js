@@ -64,7 +64,7 @@ class Detail extends React.Component {
   };
 
   getTopic = () => {
-    fetch('http://bragger.technopathic.me/api/showTopic/'+this.props.id+'?token='+this.state.token, {
+    fetch('http://styler.technopathic.me/api/showTopic/'+this.props.id+'?token='+this.state.token, {
       headers:{
         'Authorization': 'Bearer ' + this.state.token
       }
@@ -85,7 +85,7 @@ class Detail extends React.Component {
     var replies = this.state.replies;
     if(this.state.currentPage !== this.state.lastPage)
     {
-      fetch('http://bragger.technopathic.me/api/getReplies/'+this.props.id+'?page='+this.state.nextPage+'&token='+this.state.token, {
+      fetch('http://styler.technopathic.me/api/getReplies/'+this.props.id+'?page='+this.state.nextPage+'&token='+this.state.token, {
         headers:{
           'Authorization': 'Bearer ' + this.state.token
         }
@@ -117,7 +117,7 @@ class Detail extends React.Component {
     var _this = this;
     var replies = this.state.replies;
 
-    fetch('http://bragger.technopathic.me/api/storeReply?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/storeReply?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -173,7 +173,7 @@ class Detail extends React.Component {
 
   storeRealReply = (messages = []) => {
     var _this = this;
-    fetch('http://bragger.technopathic.me/api/storeRealReply?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/storeRealReply?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -240,7 +240,7 @@ class Detail extends React.Component {
   deleteTopic() {
     var _this = this;
 
-    fetch('http://bragger.technopathic.me/api/deleteTopic/'+this.props.id+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/deleteTopic/'+this.props.id+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -272,7 +272,7 @@ class Detail extends React.Component {
   {
     var _this = this;
 
-    fetch('http://bragger.technopathic.me/api/reportTopic/'+id+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/reportTopic/'+id+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -308,7 +308,7 @@ class Detail extends React.Component {
   {
     var _this = this;
 
-    fetch('http://bragger.technopathic.me/api/unReportTopic/'+id+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/unReportTopic/'+id+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -337,7 +337,7 @@ class Detail extends React.Component {
   deleteReply(id) {
     var _this = this;
 
-    fetch('http://bragger.technopathic.me/api/deleteReply/'+id+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/deleteReply/'+id+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -367,7 +367,7 @@ class Detail extends React.Component {
   reportReply(id) {
     var _this = this;
 
-    fetch('http://bragger.technopathic.me/api/reportReply/'+id+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/reportReply/'+id+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -403,7 +403,7 @@ class Detail extends React.Component {
   {
     var _this = this;
 
-    fetch('http://bragger.technopathic.me/api/unReportReply/'+id+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/unReportReply/'+id+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token

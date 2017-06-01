@@ -54,7 +54,7 @@ class EditProfile extends React.Component {
  };
 
  getProfile = () => {
-   fetch('http://bragger.technopathic.me/api/getProfile/'+this.props.uid+'?token='+this.state.token, {
+   fetch('http://styler.technopathic.me/api/getProfile/'+this.props.uid+'?token='+this.state.token, {
      headers:{
        'Authorization': 'Bearer ' + this.state.token
      }
@@ -101,7 +101,7 @@ class EditProfile extends React.Component {
     data.append('newPassword', this.state.newPassword);
     data.append('confirmPassword', this.state.confirmPassword);
 
-    fetch('http://bragger.technopathic.me/api/updateProfile/'+this.props.uid+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/updateProfile/'+this.props.uid+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token

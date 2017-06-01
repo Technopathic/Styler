@@ -37,7 +37,7 @@ class SignUp extends React.Component {
 
   signIn() {
     var _this = this;
-    fetch('http://bragger.technopathic.me/api/signIn', {
+    fetch('http://styler.technopathic.me/api/signIn', {
       method: 'POST',
       body: JSON.stringify({
         email: this.state.email,
@@ -58,7 +58,7 @@ class SignUp extends React.Component {
       }
       else if(json.token) {
         AsyncStorage.setItem('token', json.token);
-        fetch('http://bragger.technopathic.me/api/authenticate/user?token='+ json.token, {
+        fetch('http://styler.technopathic.me/api/authenticate/user?token='+ json.token, {
           headers:{
             'Authorization': 'Bearer ' + json.token
           }
@@ -78,7 +78,7 @@ class SignUp extends React.Component {
 
   signUp() {
     var _this = this;
-    fetch('http://bragger.technopathic.me/api/signUp', {
+    fetch('http://styler.technopathic.me/api/signUp', {
       method: 'POST',
       body: JSON.stringify({
         email: this.state.email,

@@ -57,7 +57,7 @@ showReport(visible) { this.setState({ reportOpen: visible}); }
  };
 
  getProfile = () => {
-   fetch('http://bragger.technopathic.me/api/getProfile/'+this.props.uid+'?token='+this.state.token, {
+   fetch('http://styler.technopathic.me/api/getProfile/'+this.props.uid+'?token='+this.state.token, {
      headers:{
        'Authorization': 'Bearer ' + this.state.token
      }
@@ -86,7 +86,7 @@ showReport(visible) { this.setState({ reportOpen: visible}); }
    var topics = this.state.topics;
    if(this.state.currentPage !== this.state.lastPage)
    {
-     fetch('http://bragger.technopathic.me/api/profileTopics/'+this.props.uid+'?page='+this.state.nextPage+'&token=' + this.state.token, {
+     fetch('http://styler.technopathic.me/api/profileTopics/'+this.props.uid+'?page='+this.state.nextPage+'&token=' + this.state.token, {
        headers:{
          'Authorization': 'Bearer ' + this.state.token
        }
@@ -122,7 +122,7 @@ showReport(visible) { this.setState({ reportOpen: visible}); }
  reportProfile() {
     var _this = this;
 
-    fetch('http://bragger.technopathic.me/api/reportProfile/'+this.props.uid+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/reportProfile/'+this.props.uid+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -157,7 +157,7 @@ showReport(visible) { this.setState({ reportOpen: visible}); }
   unReportProfile(id) {
     var _this = this;
 
-    fetch('http://bragger.technopathic.me/api/unReportProfile/'+id+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/unReportProfile/'+id+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -186,7 +186,7 @@ showReport(visible) { this.setState({ reportOpen: visible}); }
   banUser(id) {
     var _this = this;
 
-    fetch('http://bragger.technopathic.me/api/banUser/'+id+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/banUser/'+id+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -214,7 +214,7 @@ showReport(visible) { this.setState({ reportOpen: visible}); }
 
   storeFollow(id) {
     var _this = this;
-    fetch('http://bragger.technopathic.me/api/storeFollower?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/storeFollower?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token

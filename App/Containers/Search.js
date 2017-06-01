@@ -43,7 +43,7 @@ class Search extends React.Component {
     var tags = this.state.tags;
     if(this.state.currentPage !== this.state.lastPage)
     {
-      fetch('http://bragger.technopathic.me/api/getTags?page='+this.state.nextPage+'&token=' + this.state.token, {
+      fetch('http://styler.technopathic.me/api/getTags?page='+this.state.nextPage+'&token=' + this.state.token, {
         headers:{
           'Authorization': 'Bearer ' + this.state.token
         }
@@ -99,7 +99,7 @@ class Search extends React.Component {
       lastTopic:1,
       tagName:name
     }, function() {
-      fetch('http://bragger.technopathic.me/api/searchTag?page=1&token=' + this.state.token, {
+      fetch('http://styler.technopathic.me/api/searchTag?page=1&token=' + this.state.token, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -138,7 +138,7 @@ class Search extends React.Component {
     var topics = this.state.topics;
     if(this.state.currentPage !== this.state.lastPage)
     {
-      fetch('http://bragger.technopathic.me/api/searchTopics?page='+this.state.nextTopic+'&token=' + this.state.token, {
+      fetch('http://styler.technopathic.me/api/searchTopics?page='+this.state.nextTopic+'&token=' + this.state.token, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -46,7 +46,7 @@ class EditTopic extends React.Component {
   };
 
   getTopic = () => {
-    fetch('http://bragger.technopathic.me/api/showTopic/'+this.props.id+'?token='+this.state.token, {
+    fetch('http://styler.technopathic.me/api/showTopic/'+this.props.id+'?token='+this.state.token, {
       headers:{
         'Authorization': 'Bearer ' + this.state.token
       }
@@ -133,7 +133,7 @@ class EditTopic extends React.Component {
     data.append('topicImg', this.state.topicImg);
     data.append('topicBody', this.state.topicBody);
 
-    fetch('http://bragger.technopathic.me/api/storeTopic?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/storeTopic?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token

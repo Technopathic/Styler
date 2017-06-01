@@ -48,7 +48,7 @@ class Notifications extends React.Component {
  };
 
  getNotifs = () => {
-  fetch('http://bragger.technopathic.me/api/getNotifs?token=' + this.state.token, {
+  fetch('http://styler.technopathic.me/api/getNotifs?token=' + this.state.token, {
     headers:{
       'Authorization': 'Bearer ' + this.state.token
     }
@@ -72,7 +72,7 @@ class Notifications extends React.Component {
     }
   }.bind(this));
 
-  fetch('http://bragger.technopathic.me/api/readNotifs?token=' + this.state.token, {
+  fetch('http://styler.technopathic.me/api/readNotifs?token=' + this.state.token, {
     headers:{
       'Authorization': 'Bearer ' + this.state.token
     }
@@ -86,7 +86,7 @@ class Notifications extends React.Component {
     var requests = this.state.requests;
     var reports = this.state.reports;
 
-    fetch('http://bragger.technopathic.me/api/deleteNotif/'+id+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/deleteNotif/'+id+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -132,7 +132,7 @@ class Notifications extends React.Component {
   {
     var _this = this;
     var requests = this.state.requests;
-    fetch('http://bragger.technopathic.me/api/acceptRequest/'+id+'/'+peerID+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/acceptRequest/'+id+'/'+peerID+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token
@@ -159,7 +159,7 @@ class Notifications extends React.Component {
   {
     var _this = this;
     var requests = this.state.requests;
-    fetch('http://bragger.technopathic.me/api/denyRequest/'+id+'/'+peerID+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/denyRequest/'+id+'/'+peerID+'?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token

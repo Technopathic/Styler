@@ -37,7 +37,7 @@ class SignIn extends React.Component {
 
   signIn() {
     var _this = this;
-    fetch('http://bragger.technopathic.me/api/signIn', {
+    fetch('http://styler.technopathic.me/api/signIn', {
       method: 'POST',
       body: JSON.stringify({
         email: this.state.email,
@@ -58,7 +58,7 @@ class SignIn extends React.Component {
       }
       else if(json.token) {
         AsyncStorage.setItem('token', json.token);
-        fetch('http://bragger.technopathic.me/api/authenticate/user?token='+ json.token, {
+        fetch('http://styler.technopathic.me/api/authenticate/user?token='+ json.token, {
           headers:{
             'Authorization': 'Bearer ' + json.token
           }
@@ -78,7 +78,7 @@ class SignIn extends React.Component {
 
   resetPassword() {
     var _this = this;
-    fetch('http://bragger.technopathic.me/api/resetPassword', {
+    fetch('http://styler.technopathic.me/api/resetPassword', {
       method: 'POST',
       body: JSON.stringify({
         email: this.state.reset
@@ -110,7 +110,7 @@ class SignIn extends React.Component {
       appId: '1327709913915742',
       callback:'fb1327709913915742://authorize'
     }).then((info) => {
-      fetch('http://bragger.technopathic.me/api/socialSignOn', {
+      fetch('http://styler.technopathic.me/api/socialSignOn', {
         method: 'POST',
         body: JSON.stringify({
           token: info.credentials.access_token,
@@ -125,7 +125,7 @@ class SignIn extends React.Component {
         }
         else if(json.token) {
           AsyncStorage.setItem('token', json.token);
-          fetch('http://bragger.technopathic.me/api/authenticate/user?token='+ json.token, {
+          fetch('http://styler.technopathic.me/api/authenticate/user?token='+ json.token, {
             headers: {
               "Authorization":"Bearer "+json.token
             }
@@ -154,7 +154,7 @@ class SignIn extends React.Component {
       appSecret: 'jlBiEuMjqggShJwG7BztRZHSREp0RrQRPn1fTQQTzXX8FZgxDS',
       callback: 'com.renplatev3://authorize',
     }).then((info) => {
-      fetch('http://bragger.technopathic.me/api/socialSignOn', {
+      fetch('http://styler.technopathic.me/api/socialSignOn', {
         method: 'POST',
         body: JSON.stringify({
           token: info.credentials.oauth_token,
@@ -170,7 +170,7 @@ class SignIn extends React.Component {
         }
         else if(json.token) {
           AsyncStorage.setItem('token', json.token);
-          fetch('http://bragger.technopathic.me/api/authenticate/user?token='+ json.token, {
+          fetch('http://styler.technopathic.me/api/authenticate/user?token='+ json.token, {
             headers: {
               "Authorization":"Bearer "+json.token
             }
@@ -198,7 +198,7 @@ class SignIn extends React.Component {
       appId: '85643794193-tf4jmni7bqirqqvm3fio8l0qgc5idmrh.apps.googleusercontent.com',
       callback: 'com.renplatev3:/oauth2redirect',
     }).then((info) => {
-      fetch('http://bragger.technopathic.me/api/socialSignOn', {
+      fetch('http://styler.technopathic.me/api/socialSignOn', {
         method: 'POST',
         body: JSON.stringify({
           token: info.credentials.access_token,
@@ -213,7 +213,7 @@ class SignIn extends React.Component {
         }
         else if(json.token) {
           AsyncStorage.setItem('token', json.token);
-          fetch('http://bragger.technopathic.me/api/authenticate/user?token='+ json.token, {
+          fetch('http://styler.technopathic.me/api/authenticate/user?token='+ json.token, {
             headers: {
               "Authorization":"Bearer "+json.token
             }

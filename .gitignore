@@ -41,6 +41,9 @@ buck-out/
 android/app/libs
 *.keystore
 
+_tests_/
+yarn.lock
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the

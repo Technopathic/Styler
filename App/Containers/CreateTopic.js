@@ -169,7 +169,7 @@ class CreateTopic extends React.Component {
     data.append('topicImg', this.state.topicImg);
     data.append('topicArticles', this.state.topicArticles);
 
-    fetch('http://bragger.technopathic.me/api/storeTopic?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/storeTopic?token=' + this.state.token, {
       method: 'POST',
       body:data,
       headers: {

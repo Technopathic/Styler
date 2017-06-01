@@ -25,17 +25,17 @@ export default class Home extends React.Component {
       loadMode:'New',
       thumbnails:[
         {
-          topicThumbnail:"http://bragger.technopathic.me/storage/media/topics/image/thumbnails/zs62B084TlQDmrf.png",
+          topicThumbnail:"http://styler.technopathic.me/storage/media/topics/image/thumbnails/zs62B084TlQDmrf.png",
           active:true,
           topicID:1
         },
         {
-          topicThumbnail:"http://bragger.technopathic.me/storage/media/topics/image/thumbnails/joNGbWpipvKLI5A.png",
+          topicThumbnail:"http://styler.technopathic.me/storage/media/topics/image/thumbnails/joNGbWpipvKLI5A.png",
           active:false,
           topicID:1
         },
         {
-          topicThumbnail:"http://bragger.technopathic.me/storage/media/topics/image/thumbnails/PgibhygLRZBwgkc.png",
+          topicThumbnail:"http://styler.technopathic.me/storage/media/topics/image/thumbnails/PgibhygLRZBwgkc.png",
           active:false,
           topicID:1
         },
@@ -59,7 +59,7 @@ export default class Home extends React.Component {
     var topics = this.state.topics;
     if(this.state.currentPage !== this.state.lastPage)
     {
-      fetch('http://bragger.technopathic.me/api/getTopics?page='+this.state.nextPage+'&token=' + this.state.token, {
+      fetch('http://styler.technopathic.me/api/getTopics?page='+this.state.nextPage+'&token=' + this.state.token, {
         headers: {
           'Authorization':'Bearer ' +this.state.token
         }
@@ -97,7 +97,7 @@ export default class Home extends React.Component {
     var topics = this.state.topics;
     if(this.state.currentPage !== this.state.lastPage)
     {
-      fetch('http://bragger.technopathic.me/api/getHot?page='+this.state.nextPage+'&token=' + this.state.token, {
+      fetch('http://styler.technopathic.me/api/getHot?page='+this.state.nextPage+'&token=' + this.state.token, {
         headers: {
           'Authorization':'Bearer ' +this.state.token
         }
@@ -144,7 +144,7 @@ export default class Home extends React.Component {
   voteTopic(id, dir) {
     var topics = this.state.topics;
 
-    fetch('http://bragger.technopathic.me/api/voteTopic/'+id+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/voteTopic/'+id+'?token=' + this.state.token, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

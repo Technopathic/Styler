@@ -48,7 +48,7 @@ class Followers extends React.Component {
     var followers = this.state.followers;
     if(this.state.currentPage !== this.state.lastPage)
     {
-      fetch('http://bragger.technopathic.me/api/getFollowers/'+this.props.id+'?page='+this.state.nextPage+'&token=' + this.state.token, {
+      fetch('http://styler.technopathic.me/api/getFollowers/'+this.props.id+'?page='+this.state.nextPage+'&token=' + this.state.token, {
         headers:{
           'Authorization': 'Bearer ' + this.state.token
         }
@@ -86,7 +86,7 @@ class Followers extends React.Component {
   storeFollow(id) {
     var _this = this;
     var followers = this.state.followers;
-    fetch('http://bragger.technopathic.me/api/storeFollower?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/storeFollower?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token

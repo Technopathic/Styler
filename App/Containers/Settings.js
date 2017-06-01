@@ -50,7 +50,7 @@ class Settings extends React.Component {
  };
 
   getSettings = () => {
-    fetch('http://bragger.technopathic.me/api/getSettings/?token='+this.state.token, {
+    fetch('http://styler.technopathic.me/api/getSettings/?token='+this.state.token, {
       headers:{
         'Authorization': 'Bearer ' + this.state.token
       }
@@ -87,7 +87,7 @@ class Settings extends React.Component {
     data.append('notiMention', this.state.notiMention);
     data.append('profPrivate', this.state.profPrivate);
 
-    fetch('http://bragger.technopathic.me/api/updateSettings/?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/updateSettings/?token=' + this.state.token, {
       method: 'POST',
       headers:{
         'Authorization': 'Bearer ' + this.state.token

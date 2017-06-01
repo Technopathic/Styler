@@ -34,7 +34,7 @@ class Features extends React.Component {
     .then(() => {
       this.getFeature();
 
-      fetch('http://bragger.technopathic.me/api/suggestFollows?token=' + this.state.token, {
+      fetch('http://styler.technopathic.me/api/suggestFollows?token=' + this.state.token, {
         headers:{
           'Authorization': 'Bearer ' + this.state.token
         }
@@ -61,7 +61,7 @@ class Features extends React.Component {
     var topics = this.state.topics;
     if(this.state.currentPage !== this.state.lastPage)
     {
-      fetch('http://bragger.technopathic.me/api/getFollowTopics?page='+this.state.nextPage+'&token=' + this.state.token, {
+      fetch('http://styler.technopathic.me/api/getFollowTopics?page='+this.state.nextPage+'&token=' + this.state.token, {
         headers:{
           'Authorization': 'Bearer ' + this.state.token
         }
@@ -106,7 +106,7 @@ class Features extends React.Component {
   voteTopic(id, dir) {
     var topics = this.state.topics;
 
-    fetch('http://bragger.technopathic.me/api/voteTopic/'+id+'?token=' + this.state.token, {
+    fetch('http://styler.technopathic.me/api/voteTopic/'+id+'?token=' + this.state.token, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
